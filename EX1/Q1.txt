@@ -1,0 +1,24 @@
+1. c == a + b || !flag
+    c == 6 + 9 || !1
+    14 == 15 || 0
+    0 || 0
+    Answer: False (0)
+    Short-circuit: No. The left side is false, so the right side is evaluated.
+2. a != 7 && flag || c >= 6
+    6 != 7 && 1 || 14 >= 6
+    1 && 1 || 1
+    1 || 1
+    Answer: True (1)
+    Short-circuit: Yes. The left side of || is true, so c >= 6 is not evaluated.
+3. !(b <= 12) && a % 2 == 0
+    !(9 <= 12) && 6 % 2 == 0
+    !1 && 1
+    0 && 1
+    Answer: False (0)
+    Short-circuit: Yes. The left side of && is false, so the right side is not evaluated.
+4. !(a > 5 || c < a + b)
+    !(6 > 5 || 14 < 6 + 9)
+    !(1 || 0)
+    !1
+    Answer: False (0)
+    Short-circuit: Yes. The left side of the inner || is true, so c < a + b is not evaluated.
